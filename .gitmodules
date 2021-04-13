@@ -1,0 +1,12 @@
+[submodule "thirdparty/pytorch_face_landmark"]
+	path = thirdparty/pytorch_face_landmark
+	url = https://github.com/cunjian/pytorch_face_landmark.git
+[submodule "thirdparty/face_normals"]
+	path = thirdparty/face_normals
+	url = https://github.com/boukhayma/face_normals.git
+[submodule "thirdparty/facenet-pytorch"]
+	path = thirdparty/facenet-pytorch
+	url = https://github.com/timesler/facenet-pytorch.git
+[submodule "thirdparty/SemanticSegmentation"]
+	path = thirdparty/SemanticSegmentation
+	url = https://github.com/WillBrennan/SemanticSegmentation.git
