@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<link rel="stylesheet" type="text/css" href="GAR.css">
+<html>
+	<head>
+	<title>Inverting Generative Adversarial Renderer for Face Reconstruction</title>
+	</head>
+	<body>
+	<br>
+	<center>
+		<span style="font-size:30px">Inverting Generative Adversarial Renderer for Face Reconstruction</span>
+	</center>
+	<br>
+	<!--Authors List-->
+	<table align=center width=900px>
+		<tr>
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px"><a>Jingan Piao<sup>1</sup></a></span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px"><a>Keqiang Sun<sup>1</sup></a></span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px"><a>Quan Wang<sup>2,3</sup></a></span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px"><a>KwanYee Lin<sup>1,2</sup>*</a></span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px">
+			<a href=http://www.ee.cuhk.edu.hk/~hsli/>
+				Hongsheng Li<sup>1,4</sup>*
+			</a></span>
+		</center>
+		</td>
+		</tr>
+	</table>
+	<br>
+	<!--Organization-->
+	<table align=center width=900px>
+		<tr>
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px">
+				<sup>1</sup>CUHK-SenseTime Joint Laboratory,
+				</br>Chinese University of Hong Kong
+			</span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px">
+				<sup>2</sup>SenseTime Research and</br>Tetras.AI
+			</span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px"><sup>3</sup>Shanghai AI Laborator</span>
+		</center>
+		</td>
+
+		<td align=center width=80px>
+		<center>
+			<span style="font-size:18px">
+				<sup>4</sup>School of CST,
+				</br>Xidian University
+			</span>
+		</center>
+		</td>
+		</tr>
+	</table>
+	<br>
+	<!--Example Image-->
+	<br>
+	<table align=center width=900px>
+		<tr>
+		<td width=900px>
+		<center><a href="./support/Reconstruct.png">
+			<img src = "./support/Reconstruct.png" height="400px"></img></href>
+		</a><br></center>
+		</td>
+
+		<td width=900px>
+		<center><a href="./support/Pipeline.png">
+			<img src = "./support/Pipeline.png" height="400px"></img></href>
+		</a><br></center>
+		</td>
+		</tr>
+	</table>
+	<!--Introduction-->
+	<br>
+	<p style="text-align:justify">
+	&nbsp;&nbsp;&nbsp;&nbsp;Given a monocular face image as input, 3D face geometry reconstruction aims to recover a corresponding 3Dface mesh. Recently, both optimization-based and learning-based face reconstruction methods have taken advantage ofthe emerging differentiable renderer and shown promisingresults. However, the differentiable renderer, mainly basedon graphics rules, simplifies the realistic mechanism of the illumination, reflection, etc., of the real world, thus cannot produce realistic images. This brings a lot of domain-shift noise to the optimization or training process. In this work, we introduce a novel Generative Adversarial Renderer(GAR) and propose to tailor its inverted version to the general fitting pipeline, to tackle the above problem. Specifically, the carefully designed neural renderer takes a face normal map and a latent code representing other factors as inputs and renders a realistic face image. Since the GAR learns to model complicated realworld images, instead of relying on simplified graphics rules, it is capable of producing realistic images, which essentially inhibits the domain-shift noise in training and optimization. Equipped with the elaborated GAR, we further proposed a novel approach to predict 3D face parameters, in which we first obtain fine initial parameters via Renderer Inverting and then refine it with gradient-based optimizers. Extensive experiments have been conducted to demonstrate the effectiveness of the proposed generative adversarial renderer and the novel optimization-based face reconstruction framework. Our method achieves state-of-the-art performances on multiple face reconstruction datasets.
+	</p>
+	<br><br><hr>
+	<!--Paper Link-->
+	<table align=center width=1100>
+		<center><h1>Paper</h1></center>
+		<tr><!--TODO: add archive link-->
+		<td><a href="https://arxiv.org/pdf/">
+			<img style="height:180px" src="./support/paper.png"/>
+		</a></td>
+
+		<td><span style="font-size:14pt">
+			Inverting Generative Adversarial Renderer for Face Reconstruction
+			<br><br>
+			<i>Jingtan Piao, Keqiang Sun, Quan Wang, KwanYee Lin*, Hongsheng Li*</i>
+			<br><br>
+			Computer Vision and Pattern Recognition, CVPR 2021.
+			<br>
+		</span></td>
+		</tr>
+	</table>
+	<br>
+	<table align=center width=400px>
+		<tr>
+		<td><span style="font-size:14pt">
+			<center>
+			<a href="./support/StyleGANRender.pdf">[PDF]</a>
+			</center>
+		</span></td>
+
+		<td><span style="font-size:14pt">
+			<center>
+			<a href="./support/GAR-supp.pdf">[Appendix]</a>
+			</center>
+		</span></td>
+
+		<td><span style="font-size:14pt">
+			<center><!--TODO: add gihub link-->
+			<a href="https://github.com/WestlyPark/StyleRenderer">[Code]</a>
+			</center>
+		</span></td>
+
+		<td><span style="font-size:14pt">
+			<center><!--TODO: update bibtex-->
+			<a href="./support/GAR_bibtex.txt">[Bibtex]</a>
+			</center>
+		</span></td>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>
